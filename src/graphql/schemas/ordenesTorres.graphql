@@ -1,0 +1,66 @@
+type Observacion {
+  fechaOBS: String
+  hora: String
+  creadoPor: String
+  tipo: String
+  nota: String
+  id: Int
+  inspeccion: Boolean
+  subtipo: String
+}
+
+type Orden {
+  idTramiteTyT: String
+  pedido: String
+  etapa: String
+  ordenTyT: String
+  ordenCTT: String
+  ordenTOL: String
+  ordenTE: String
+  proveedor: String
+  producto: String
+  categoria: String
+  navieraFW: String
+  clienteId: String
+  cliente: String
+  llegadaReal: String
+  licenciaDCP: String
+  fechaVencimientoLicencia: String
+  documentoTransporte: String
+  vencimientoCas: String
+  dai: String
+  regimen: String
+  fechaDAI: String
+  canaldeAforo: String
+  estadoDav: String
+  autEnvio: Int
+  mrn: Int
+  pesoR: Float
+  totalRegistros: Int
+  totalPaginas: Int
+  backgroundEtapa: String
+  coloLetraEtapa: String
+  listoFacturar: Boolean
+  liquidacionValor: Float
+  valorServicio: Float
+  bultos: Int
+  bodega: String
+  inspeccion: Boolean
+  facturar: Boolean
+  facturarIncompleto: Boolean
+  facturado: Boolean
+  bloqueo: Boolean
+  tracking: Boolean
+  okTransporte: Boolean
+  aduana: String
+  referenciaPago: String
+  descripcionContenedores: String
+  urlEcho: String
+  ordenEcho: String
+  observaciones: [Observacion]
+}
+
+type Query {
+    ordenes: [Orden]
+    mensaje: String
+}
